@@ -27,25 +27,23 @@ const Navbar = () => {
       <li>
         <Link to="/blog">Blog</Link>
       </li>
-      <li>
-        <Link to="/error">error</Link>
-      </li>
-      {/* {user && (
+    
+      {user && (
             <>
               <li>
-                <NavLink to="/addProduct">Add Product</NavLink>
+                <NavLink to="/addFood">Add Product</NavLink>
               </li>
               <li>
-                <NavLink to="/myCart">My Cart</NavLink>
+                <NavLink to="/myOrder">My Cart</NavLink>
               </li>
               <li>
-            <NavLink to="/updateProduct">Update Product</NavLink>
+            <NavLink to="/updateFood">Update Food</NavLink>
           </li>
-              <li>
-            <NavLink to="/productDetails">Product Details</NavLink>
-          </li>
+              {/* <li>
+            <NavLink to="/profile">Product Details</NavLink>
+          </li> */}
             </>
-          )} */}
+          )}
     </>
   );
 
