@@ -18,7 +18,8 @@ const router = createBrowserRouter([
       children: [
         {
           path: "/",
-          element: <Home/>
+          element: <Home/>,
+          loader: () => fetch("/TopFood.json"),
         },
         {
           path: "/register",
@@ -34,7 +35,8 @@ const router = createBrowserRouter([
         },
         {
           path: "/allFood",
-          element: <AllFood/>
+          element: <AllFood/>,
+          
         },
     ]
   

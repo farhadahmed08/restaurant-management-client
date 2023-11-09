@@ -1,0 +1,221 @@
+[
+ 
+  {
+    "foodName": "Burrito",
+    "foodCategory": "Mexican",
+    "price": 8.99,
+    "quantity": 28,
+    "foodImage": "https://i.ibb.co/QbrTCmT/pexels-cats-coming-1731535.jpg",
+    "foodOrigin": "Mexico",
+    "description": "A burrito is a Mexican dish consisting of a flour tortilla wrapped into a sealed cylindrical shape filled with various ingredients."
+  },
+  {
+    "foodName": "Chicken Alfredo",
+    "foodCategory": "Japanese",
+    "price": 18.99,
+    "quantity": 30,
+    "foodImage": "https://i.ibb.co/Xb5qqV1/pexels-chevanon-photography-323682.jpg",
+    "foodOrigin": "Japan",
+    "description": "Chicken Alfredo is a Japanese dish consisting of vinegared rice, various ingredients like fish, vegetables, and seafood, often served with soy sauce and wasabi."
+  },
+  {
+    "foodName": "Curry",
+    "foodCategory": "Indian",
+    "price": 14.99,
+    "quantity": 23,
+    "foodImage": "https://i.ibb.co/dD1vWM1/pexels-engin-akyurt-1487511.jpg",
+    "foodOrigin": "India",
+    "description": "Curry is a dish originating in the Indian subcontinent that typically consists of meat or vegetables in a spiced sauce."
+  },
+  {
+    "foodName": "Beef Teriyaki",
+    "foodCategory": "Japanese",
+    "price": 18.99,
+    "quantity": 30,
+    "foodImage": "https://i.ibb.co/gwP51TS/pexels-horizon-content-3763792.jpg",
+    "foodOrigin": "Japan",
+    "description": "Beef Teriyaki is a Japanese dish consisting of vinegared rice, various ingredients like fish, vegetables, and seafood, often served with soy sauce and wasabi."
+  },
+
+  {
+    "foodName": "Caprese Salad",
+    "foodCategory": "Pasta",
+    "price": 12.99,
+    "quantity": 25,
+    "foodImage": "https://i.ibb.co/2kxxRYT/pexels-janine-beth-salazar-3386854.jpg",
+    "foodOrigin": "Italy",
+    "description": "Caprese Salad is a classic Italian pasta dish made with eggs, cheese, pancetta, and black pepper. It's a creamy and savory delight."
+  },
+  {
+    "foodName": "Beef Wellington",
+    "foodCategory": "Fast Food",
+    "price": 18.99,
+    "quantity": 30,
+    "foodImage": "https://i.ibb.co/hBgnd7t/pexels-j-a-n-n-g-u-y-e-n-2664216.jpg",
+    "foodOrigin": "United States",
+    "description": "Beef Wellington is a United States dish consisting of vinegared rice, various ingredients like fish, vegetables, and seafood, often served with soy sauce and wasabi."
+  },
+  {
+    "foodName": "Paella",
+    "foodCategory": "Fast Food",
+    "price": 6.99,
+    "quantity": 40,
+    "foodImage": "https://i.ibb.co/VmbwVCB/pexels-jer-chung-2059150.jpg",
+    "foodOrigin": "United States",
+    "description": "A Paella is a popular American fast food item consisting of a ground meat patty, usually beef, served in a bun with various toppings and condiments."
+  },
+  {
+    "foodName": "Pho",
+    "foodCategory": "Italian",
+    "price": 9.99,
+    "quantity": 50,
+    "foodImage": "https://i.ibb.co/4Mvbdzb/pexels-marianna-3843225.jpg",
+    "foodOrigin": "Italy",
+    "description": "Pho is an Italian dish consisting of a yeasted flatbread typically topped with tomato sauce and cheese and baked in an oven."
+  },
+  {
+    "foodName": "Lobster Roll",
+    "foodCategory": "Mexican",
+    "price": 7.49,
+    "quantity": 35,
+    "foodImage": "https://i.ibb.co/gFpXMyw/pexels-mister-mister-3490368.jpg",
+    "foodOrigin": "Mexico",
+    "description": "Lobster Roll are a traditional Mexican dish consisting of a folded or rolled tortilla filled with various ingredients, often including meat, beans, and salsa."
+  },
+  {
+    "foodName": "Chicken Kebab",
+    "foodCategory": "Mexican",
+    "price": 8.99,
+    "quantity": 28,
+    "foodImage": "https://i.ibb.co/2S2T5Y1/pexels-naim-benjelloun-1618873.jpg",
+    "foodOrigin": "Mexico",
+    "description": "A Chicken Kebab is a Mexican dish consisting of a flour tortilla wrapped into a sealed cylindrical shape filled with various ingredients."
+  },
+  {
+    "foodName": "Margherita Pizza",
+    "foodCategory": "Indian",
+    "price": 14.99,
+    "quantity": 23,
+    "foodImage": "https://i.ibb.co/XjVwKdz/pexels-pixabay-162744.jpg",
+    "foodOrigin": "India",
+    "description": "Margherita Pizza is a dish originating in the Indian subcontinent that typically consists of meat or vegetables in a spiced sauce."
+  },
+  {
+    "foodName": "Fish and Chips",
+    "foodCategory": "Japanese",
+    "price": 18.99,
+    "quantity": 30,
+    "foodImage": "https://i.ibb.co/HY9xqj3/pexels-pixabay-461382.jpg",
+    "foodOrigin": "Japan",
+    "description": "Fish and Chips is a Japanese dish consisting of vinegared rice, various ingredients like fish, vegetables, and seafood, often served with soy sauce and wasabi."
+  },
+  {
+    "foodName": "Pancakes",
+    "foodCategory": "Breakfast",
+    "price": 7.99,
+    "quantity": 25,
+    "foodImage": "https://i.ibb.co/bLbdG8k/pexels-polina-tankilevitch-4109111.jpg",
+    "foodOrigin": "United States",
+    "description": "Pancakes are a popular breakfast dish made from a batter that's cooked on a hot griddle or frying pan. They are typically served with syrup, butter, or other toppings."
+  },
+  {
+    "foodName": "Ramen",
+    "foodCategory": "Japanese",
+    "price": 10.49,
+    "quantity": 20,
+    "foodImage": "https://i.ibb.co/X2fr8w9/pexels-reneereneee-3993720.jpg",
+    "foodOrigin": "Japan",
+    "description": "Ramen is a Japanese noodle soup dish with Chinese origins. It typically consists of Chinese wheat noodles served in a meat or fish-based broth, often flavored with soy sauce or miso."
+  },
+
+  {
+    "foodName": "Clam Chowder",
+    "foodCategory": "Pasta",
+    "price": 12.99,
+    "quantity": 25,
+    "foodImage": "https://i.ibb.co/0Q9dJ61/pexels-ricardo-rojas-3642030.jpg",
+    "foodOrigin": "Italy",
+    "description": "Clam Chowder is a classic Italian pasta dish made with eggs, cheese, pancetta, and black pepper. It's a creamy and savory delight."
+  },
+  {
+    "foodName": "Baked Salmon",
+    "foodCategory": "Japanese",
+    "price": 18.99,
+    "quantity": 30,
+    "foodImage": "https://i.ibb.co/gVqFvDD/pexels-solodsha-7664397.jpg",
+    "foodOrigin": "Japan",
+    "description": "Baked Salmon is a Japanese dish consisting of vinegared rice, various ingredients like fish, vegetables, and seafood, often served with soy sauce and wasabi."
+  },
+  {
+    "foodName": "Goulash",
+    "foodCategory": "Fast Food",
+    "price": 6.99,
+    "quantity": 40,
+    "foodImage": "https://i.ibb.co/MNF8FXn/pexels-team-picsfast-8753745.jpg",
+    "foodOrigin": "United States",
+    "description": "A Goulash is a popular American fast food item consisting of a ground meat patty, usually beef, served in a bun with various toppings and condiments."
+  },
+  {
+    "foodName": "Gyoza",
+    "foodCategory": "Italian",
+    "price": 9.99,
+    "quantity": 50,
+    "foodImage": "https://i.ibb.co/mHgrdVt/pexels-toa-heftiba-inca-1194431.jpg",
+    "foodOrigin": "Italy",
+    "description": "Gyoza is an Italian dish consisting of a yeasted flatbread typically topped with tomato sauce and cheese and baked in an oven."
+  },
+  {
+    "foodName": "Egg Fried Rice",
+    "foodCategory": "Mexican",
+    "price": 7.49,
+    "quantity": 35,
+    "foodImage": "https://i.ibb.co/b2G7vFP/pexels-valeria-boltneva-1251208.jpg",
+    "foodOrigin": "Mexico",
+    "description": "Egg Fried Rice are a traditional Mexican dish consisting of a folded or rolled tortilla filled with various ingredients, often including meat, beans, and salsa."
+  },
+  {
+    "foodName": "Falafel",
+    "foodCategory": "Arabian",
+    "price": 18.99,
+    "quantity": 30,
+    "foodImage": "https://i.ibb.co/hCtDL6B/pexels-valeria-boltneva-17138053.jpg",
+    "foodOrigin": "Japan",
+    "description": "Falafel is a Arabian dish consisting of vinegared rice, various ingredients like fish, vegetables, and seafood, often served with soy sauce and wasabi."
+  },
+  {
+    "foodName": "Beef Tandoori",
+    "foodCategory": "Mexican",
+    "price": 8.99,
+    "quantity": 28,
+    "foodImage": "https://i.ibb.co/gd17yVz/pexels-vincent-ma-janssen-2302809.jpg",
+    "foodOrigin": "Mexico",
+    "description": "A Beef Tandoori is a Mexican dish consisting of a flour tortilla wrapped into a sealed cylindrical shape filled with various ingredients."
+  },
+  {
+    "foodName": "Baked Ziti",
+    "foodCategory": "Japanese",
+    "price": 18.99,
+    "quantity": 30,
+    "foodImage": "https://i.ibb.co/ystWPFq/pexels-vincent-rivaud-2569219.jpg",
+    "foodOrigin": "Japan",
+    "description": "Baked Ziti is a Japanese dish consisting of vinegared rice, various ingredients like fish, vegetables, and seafood, often served with soy sauce and wasabi."
+  },
+  {
+    "foodName": "Eggplant Parmesan",
+    "foodCategory": "Japanese",
+    "price": 18.99,
+    "quantity": 30,
+    "foodImage": "https://i.ibb.co/Y7fm7Kk/pexels-william-choquette-2641886.jpg",
+    "foodOrigin": "Japan",
+    "description": "Eggplant Parmesan is a Japanese dish consisting of vinegared rice, various ingredients like fish, vegetables, and seafood, often served with soy sauce and wasabi."
+  },
+  {
+    "foodName": "Tiramisu",
+    "foodCategory": "Japanese",
+    "price": 18.99,
+    "quantity": 30,
+    "foodImage": "https://i.ibb.co/vk0zRhb/pexels-2871757.jpg",
+    "foodOrigin": "Japan",
+    "description": "Tiramisu is a Japanese dish consisting of vinegared rice, various ingredients like fish, vegetables, and seafood, often served with soy sauce and wasabi."
+  }
+]
