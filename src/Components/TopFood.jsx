@@ -10,13 +10,13 @@ const TopFood = ({topFood}) => {
     return (
         <div>
        <div className="card  bg-base-100 shadow-xl">
-  <figure className="h-[356px]"><img src={foodImage} alt="Shoes" /></figure>
+  <figure><img className="w-full h-[260px] rounded hover:scale-110 transition-all duration-300" src={foodImage} alt="Shoes" /></figure>
   <div className="card-body">
-    <h2 className="card-title">{foodName}</h2>
-    <p>{foodCategory}</p>
-    <p>{price}$</p>
+    <h2 className="card-title font-bold">{foodName}</h2>
+    <p >{foodCategory}</p>
+    <p className="text-orange-400 font-bold">{price}$</p>
     <div className="card-actions justify-end">
-      <button className="btn btn-primary">See Details</button>
+      <button className="btn btn-primary">View Details</button>
     </div>
     
   </div>
