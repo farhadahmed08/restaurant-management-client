@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCjGyaAATs9Hx7u-G4lrwiqBlfTqBEROAo",
-  authDomain: "resturant-managment-40e01.firebaseapp.com",
-  projectId: "resturant-managment-40e01",
-  storageBucket: "resturant-managment-40e01.appspot.com",
-  messagingSenderId: "492110071777",
-  appId: "1:492110071777:web:8ed00ce812b410ee2134a0"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId
 };
 
 // Initialize Firebase
