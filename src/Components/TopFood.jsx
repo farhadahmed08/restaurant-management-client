@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const TopFood = ({topFood}) => {
@@ -16,7 +17,7 @@ const TopFood = ({topFood}) => {
     <p >{foodCategory}</p>
     <p className="text-orange-400 font-bold">{price}$</p>
     <div className="card-actions justify-end">
-      <button className="btn btn-primary">View Details</button>
+     <Link to={`/toFood/${id}`}> <button className="btn btn-primary">View Details</button></Link>
     </div>
     
   </div>
