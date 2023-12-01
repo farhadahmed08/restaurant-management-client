@@ -1,28 +1,25 @@
 import { createContext, useEffect, useState } from "react";
 import app from "../firebase/firebase.config";
-import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+import UseAxiosPublic from "../hooks/UseAxiosPublic";
 
 
 export const AuthContext = createContext();
 
-const googleProvider = new GoogleAuthProvider();
 const auth = getAuth(app) 
 
 
 const AuthProvider = ({children}) => {
-
+    
     const [user,setUser]= useState(null);
     const [loading,setLoading] =useState(true);
+    const googleProvider = new GoogleAuthProvider();
+    const axiosPublic = UseAxiosPublic();
 
 
     const createUser = (email,password) =>{
         setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
-    }
-
-    const signInWithGoogle =()=>{
-        setLoading(true);
-        return signInWithPopup(auth,googleProvider)
     }
 
 
@@ -31,22 +28,58 @@ const AuthProvider = ({children}) => {
         return signInWithEmailAndPassword(auth, email, password)
     }
 
+
+
+
+    const googleSignIn = ()=>{
+        setLoading(true);
+        return signInWithPopup(auth,googleProvider);
+    } 
+
+  
+
     const logOut = ()=>{
         setLoading(true)
         return signOut(auth);
     }
 
 
+    const updateUserProfile = (name, photo) => {
+        return updateProfile(auth.currentUser, {
+            displayName: name, photoURL: photo
+        });
+    }
+
+
+
+
+
     useEffect(()=>{
         const unSubscribe =onAuthStateChanged(auth,(currentUser)=>{
-            console.log('user in the auth state changed',currentUser);
+           
             setUser(currentUser);
+            if (currentUser) {
+                // get token and store client
+                const userInfo ={email:currentUser.email};
+                axiosPublic.post('/jwt',userInfo)
+                .then(res =>{
+                    if (res.data.token) {
+                        localStorage.setItem('access-token',res.data.token);
+                    }
+                })
+            }
+            else{
+                // TODO:remove token(if token store in the client side:Local storage ,caching,in memory)
+                localStorage.removeItem('access-token')
+            }
+
+
             setLoading(false);
         });
         return()=>{
             unSubscribe();
         } 
-    },[])
+    },[axiosPublic])
 
 
 
@@ -54,9 +87,10 @@ const AuthProvider = ({children}) => {
     const authInfo ={
         user,
         loading,
-        signInWithGoogle,
+        googleSignIn,
         createUser,
         signIn,
+        updateUserProfile,
         logOut
     }
 
