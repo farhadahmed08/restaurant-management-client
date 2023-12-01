@@ -14,36 +14,13 @@ const Navbar = () => {
       <li>
         <NavLink to="/">Home</NavLink>
       </li>
-
-      <li>
-        <NavLink to="/login">Login</NavLink>
-      </li>
-      <li>
-        <NavLink to="/register">Register</NavLink>
-      </li>
       <li>
         <Link to="/allFood">All Food</Link>
       </li>
       <li>
         <Link to="/blog">Blog</Link>
       </li>
-    
-      {user && (
-            <>
-              <li>
-                <NavLink to="/addFood">Add Product</NavLink>
-              </li>
-              <li>
-                <NavLink to="/myOrder">My Cart</NavLink>
-              </li>
-              <li>
-            <NavLink to="/updateFood">Update Food</NavLink>
-          </li>
-              {/* <li>
-            <NavLink to="/profile">Product Details</NavLink>
-          </li> */}
-            </>
-          )}
+
     </>
   );
 
@@ -84,33 +61,43 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
           {user?.email ? 
-            <div className="dropdown dropdown-end">
+            <div className="dropdown dropdown-end absolute">
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                <div className="w-10 rounded-full">
+                <div className="w-10 rounded-full ">
                   <img src={user.photoURL} alt={user.displayName} />
                 </div>
               </label>
-              <ul
-                tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-              >
-                <li>
-                  <button className="btn btn-sm  btn-ghost">
-                    Farhad
-                  </button>
-                </li>
-                <li>
-                  <button className="btn btn-sm  btn-ghost" onClick={logOut}>
-                    Logout
-                  </button>
-                </li>
-              </ul>
+             <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+               <NavLink to="/register"> <button className="btn btn-sm  btn-ghost text-center">
+               My added food
+                </button></NavLink>
+              </li>
+              <li>
+              <NavLink to="/login"><button className="btn btn-sm  btn-ghost">
+              Add A food item
+                </button></NavLink>
+              </li>
+              <li>
+             <NavLink to="/"><button className="btn btn-sm  btn-ghost">
+              My order
+                </button></NavLink>
+              </li>
+            </ul>
+           
+            <button onClick={logOut}  className="btn btn-sm  btn-ghost relative bottom-3">Logout</button>
+            
             </div>
-           : (
+           : 
+           (
               <Link to='/login'>
               <button className="btn btn-sm  btn-ghost">Login</button>
           </Link>
-          )}
+          )
+          }
         </div>
     </div>
   );

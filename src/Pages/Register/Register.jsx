@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 
 const Register = () => {
 
-    const {googleSignIn} = useContext(AuthContext);
+    const { signInWithGoogle} = useContext(AuthContext);
 
     const [registerError,setRegisterError]=useState('');
     const [success,setSuccess] = useState("");
@@ -116,7 +116,7 @@ const Register = () => {
             <div className="form-control mt-6">
               <input className="btn btn-primary" type="submit" value="Sign Up" />
             </div>
-            <div onClick={googleSignIn} className="form-control">
+            <div onClick={ signInWithGoogle} className="form-control">
               <input className="btn btn-ghost" type="submit" value="Sign Up By Google" />
             </div>
             

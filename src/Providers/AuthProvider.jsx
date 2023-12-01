@@ -1,12 +1,12 @@
 import { createContext, useEffect, useState } from "react";
 import app from "../firebase/firebase.config";
-import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import UseAxiosPublic from "../hooks/UseAxiosPublic";
 
 
-export const AuthContext = createContext();
+export const AuthContext = createContext(null);
 
-const auth = getAuth(app) 
+const auth = getAuth(app) ;
 
 
 const AuthProvider = ({children}) => {
@@ -22,21 +22,16 @@ const AuthProvider = ({children}) => {
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
+    const signInWithGoogle =()=>{
+        setLoading(true);
+        return signInWithPopup(auth,googleProvider)
+    }
+
 
     const signIn = (email,password)=>{
         setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
-
-
-
-
-    const googleSignIn = ()=>{
-        setLoading(true);
-        return signInWithPopup(auth,googleProvider);
-    } 
-
-  
 
     const logOut = ()=>{
         setLoading(true)
@@ -44,19 +39,9 @@ const AuthProvider = ({children}) => {
     }
 
 
-    const updateUserProfile = (name, photo) => {
-        return updateProfile(auth.currentUser, {
-            displayName: name, photoURL: photo
-        });
-    }
-
-
-
-
-
     useEffect(()=>{
         const unSubscribe =onAuthStateChanged(auth,(currentUser)=>{
-           
+            // console.log('user in the auth state changed',currentUser);
             setUser(currentUser);
             if (currentUser) {
                 // get token and store client
@@ -72,8 +57,6 @@ const AuthProvider = ({children}) => {
                 // TODO:remove token(if token store in the client side:Local storage ,caching,in memory)
                 localStorage.removeItem('access-token')
             }
-
-
             setLoading(false);
         });
         return()=>{
@@ -87,10 +70,9 @@ const AuthProvider = ({children}) => {
     const authInfo ={
         user,
         loading,
-        googleSignIn,
+        signInWithGoogle,
         createUser,
         signIn,
-        updateUserProfile,
         logOut
     }
 
