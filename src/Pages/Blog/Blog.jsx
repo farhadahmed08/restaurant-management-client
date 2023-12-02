@@ -2,7 +2,7 @@ const Blog = () => {
   return (
     <div>
       <div className="collapse collapse-arrow bg-base-200">
-        <input type="radio" name="my-accordion-2" checked="checked" />
+        <input type="radio" name="my-accordion-2" defaultChecked />
         <div className="collapse-title text-xl font-medium">
           What is One way data binding?
         </div>

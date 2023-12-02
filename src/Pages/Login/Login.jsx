@@ -11,6 +11,7 @@ const Login = () => {
     const navigate = useNavigate()
     const location = useLocation()
     console.log('location in the login page',location);
+    const from = location.state?.from?.pathname || "/";
 
   const handleSignUp = (e) => {
 
@@ -27,7 +28,7 @@ const Login = () => {
         const user = result.user;
         console.log(user);
         setSuccess(toast.success("good job"))
-        navigate(location?.state ? location.state : '/')
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         console.log(error);

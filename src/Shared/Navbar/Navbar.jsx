@@ -72,17 +72,17 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-               <NavLink to="/register"> <button className="btn btn-sm  btn-ghost text-center">
+               <NavLink to="/"> <button className="btn btn-sm  btn-ghost text-center">
                My added food
                 </button></NavLink>
               </li>
               <li>
-              <NavLink to="/login"><button className="btn btn-sm  btn-ghost">
+              <NavLink to="/addedFood"><button className="btn btn-sm  btn-ghost">
               Add A food item
                 </button></NavLink>
               </li>
               <li>
-             <NavLink to="/"><button className="btn btn-sm  btn-ghost">
+             <NavLink to="/myOrder"><button className="btn btn-sm  btn-ghost">
               My order
                 </button></NavLink>
               </li>

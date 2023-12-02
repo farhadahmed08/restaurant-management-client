@@ -2,7 +2,7 @@ import { Link, useLoaderData } from "react-router-dom";
 
 const OrderNow = () => {
   const orderFood = useLoaderData();
-  const { foodName, foodCategory, price, foodImage, quantity,description ,
+  const { foodName, foodCategory, price, foodImage, description ,_id,
     foodOrigin
      } = orderFood;
 
@@ -17,7 +17,7 @@ const OrderNow = () => {
     <p>FoodOrigin: <span className="text-orange-600 font-bold">{foodOrigin}</span> </p>
     <p>Price: <span className="font-bold text-blue-700">{price}</span> $</p>
 
-    <Link to="/myOrderedFood"><div className="card-actions ">
+    <Link to={`/orderedFood/${_id}`}><div className="card-actions ">
       <button className="btn btn-primary">Order Now</button>
     </div></Link>
   </div>
