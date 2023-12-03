@@ -17,7 +17,7 @@ const TopFood = ({topFood}) => {
     <p >{foodCategory}</p>
     <p className="text-orange-400 font-bold">{price}$</p>
     <div className="card-actions justify-end">
-     <Link to={`/toFood/${id}`}> <button className="btn btn-primary">View Details</button></Link>
+     <Link to="/allFood"> <button className="btn btn-primary">View Details</button></Link>
     </div>
     
   </div>

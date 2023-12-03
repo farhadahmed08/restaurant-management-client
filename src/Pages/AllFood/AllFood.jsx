@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import SingleCard from "./SingleCard";
 import useFoods from "../../hooks/useFoods";
 import Banner from "../../Components/Banner";
+import AllFoodBanner from "../../Components/AllFoodBanner";
 // import { useLoaderData } from "react-router-dom";
 
 const AllFood = () => {
@@ -42,7 +43,7 @@ const AllFood = () => {
           <input type="text" placeholder="Type here" className="input input-bordered input-primary w-full max-w-xs" />
           </div> */}
       <div>
-        <Banner />
+       <AllFoodBanner/>
       </div>
       <form className="text-center mt-6" onSubmit={handleSearch}>
         <input

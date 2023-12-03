@@ -9,7 +9,7 @@ import Register from './../Pages/Register/Register';
 import Login from './../Pages/Login/Login';
 import AllFood from "../Pages/AllFood/AllFood";
 import Blog from "../Pages/Blog/Blog";
-import SingleFoodCard from "../Pages/AllFood/SingleFoodCard";
+
 import OrderNow from "../Pages/OrderNow/OrderNow";
 import OrderPage from "../Pages/OrderPage/OrderPage";
 import AddedFood from "../Pages/AddedFood/AddedFood";
@@ -17,6 +17,7 @@ import PrivateRoute from "./PrivateRoute";
 import MyOrderList from "../Pages/MyOrderList/MyOrderList";
 import MyAdded from "../Pages/MyAdded/Myadded";
 import UpdateItem from "../Pages/UpdateItem/UpdateItem";
+
 
 const router = createBrowserRouter([
     {
@@ -46,6 +47,7 @@ const router = createBrowserRouter([
           element: <AllFood/>,
           
         },
+        
         {
           path: "/food/:id",
           element: <OrderNow/>,

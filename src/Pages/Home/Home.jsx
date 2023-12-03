@@ -2,6 +2,8 @@ import { Link, useLoaderData } from "react-router-dom";
 import Banner from "../../Components/Banner";
 import TopFood from "../../Components/TopFood";
 import SectionTitle from "../../Components/SectionTitle";
+import About from "../../Components/About";
+import AboutRestaurant from "../../Components/AboutRestaurant";
 
 const Home = () => {
   const topFoods = useLoaderData();
@@ -27,9 +29,15 @@ const Home = () => {
         </div>
       </Link>
       <SectionTitle
-        subHeading={"From 11.00am to 10.00pm"}
+        subHeading={"Top Rated Chef"}
+        heading={"About Our Chef"}
+      ></SectionTitle>
+      <About/>
+      <SectionTitle
+        subHeading={"Restaurant"}
         heading={"About Our Restaurant"}
       ></SectionTitle>
+      <AboutRestaurant/>
     </div>
   );
 };
