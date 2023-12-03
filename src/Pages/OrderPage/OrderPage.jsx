@@ -10,7 +10,7 @@ const OrderPage = () => {
     const {user} = useAuth();
     const orderFood = useLoaderData();
     const { foodName, foodCategory, price, foodImage, description ,_id,
-    foodOrigin
+    
      } = orderFood;
      const axiosSecure = useAxiosSecure();
      const location = useLocation();

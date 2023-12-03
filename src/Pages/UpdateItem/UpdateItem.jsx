@@ -1,19 +1,21 @@
-import { useForm } from "react-hook-form";
+import { FaUtensils } from "react-icons/fa";
+import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import useAuth from "../../hooks/useAuth";
+import { useForm } from "react-hook-form";
 import UseAxiosPublic from "../../hooks/UseAxiosPublic";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
-import SectionTitle from "../../Components/SectionTitle";
-import { FaUtensils } from "react-icons/fa";
-import useAuth from "../../hooks/useAuth";
-
-
-
 
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
 
 
-const AddedFood = () => {
+const UpdateItem = () => {
+
+    const item = useLoaderData();
+    const { email, name, image, price ,_id} =item;
+    console.log(name)
+
 
     const { register, handleSubmit,reset } = useForm();
     const {user} = useAuth();
@@ -42,15 +44,15 @@ const AddedFood = () => {
           }
           console.log(addItem)
           //
-          const addRes = await axiosSecure.post('/myAdded',addItem)
+          const addRes = await axiosSecure.patch(`/myAdded/${_id}`,addItem)
           console.log(addRes.data) 
-          if (addRes.data.insertedId) {
+          if (addRes.data.modifiedCount > 0) {
               // show success popup
               reset();
               Swal.fire({
                   position: "top-end",
                   icon: "success",
-                  title: `${data.name} is added to the menu`,
+                  title: `${data.name} is updated to the myAdded`,
                   showConfirmButton: false,
                   timer: 1500
                 });
@@ -67,11 +69,7 @@ const AddedFood = () => {
 
     return (
         <div>
-             <SectionTitle
-        heading="add an item"
-        subHeading="What's new"
-      ></SectionTitle>
-            <div>
+              <div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="form-control w-full my-6">
             <label className="label">
@@ -186,7 +184,7 @@ const AddedFood = () => {
            type="file" className="file-input w-full max-w-xs" />
            </div>
           <button className="btn">
-            Add Items <FaUtensils className="ml-4"/>
+            update Items <FaUtensils className="ml-4"/>
           </button>
         </form>
       </div>
@@ -194,4 +192,4 @@ const AddedFood = () => {
     );
 };
 
-export default AddedFood;
+export default UpdateItem;
