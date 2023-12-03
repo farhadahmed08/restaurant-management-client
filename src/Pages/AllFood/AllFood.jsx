@@ -6,11 +6,11 @@ import AllFoodBanner from "../../Components/AllFoodBanner";
 // import { useLoaderData } from "react-router-dom";
 
 const AllFood = () => {
-  const [food] = useFoods();
-
-  // const [allFoods, setAllFoods] = useState([]);
   const [asc, setAsc] = useState(true);
   const [search, setSearch] = useState("");
+  const [food] = useFoods(asc,search);
+
+  // const [allFoods, setAllFoods] = useState([]);
 
   // const allFoods = useFoods(asc, search);
 
@@ -54,17 +54,17 @@ const AllFood = () => {
         />
         <input type="submit" value="search" className="btn btn-ghost " />
       </form>
-      {/* <button className="btn btn-secondary m-5" onClick={() => setAsc(!asc)}>
+      <button className="btn btn-secondary m-5" onClick={() => setAsc(!asc)}>
         {asc ? "Price: Low to High" : "Price: High to Low"}
-      </button> */}
+      </button>
 
-      <select className="select select-bordered w-full max-w-xs m-10">
+      {/* <select className="select select-bordered w-full max-w-xs m-10">
         <option disabled defaultValue="Filter By">
           Filter By
         </option>
         <option>Price Low to High</option>
         <option>Price High To Low</option>
-      </select>
+      </select> */}
       <div></div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {food?.map((foods) => (

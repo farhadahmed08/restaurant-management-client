@@ -5,15 +5,15 @@ import { useQuery } from "@tanstack/react-query";
 
 
 
-const useFoods = () => {
+const useFoods = (asc,search) => {
 
   const axiosPublic = UseAxiosPublic();
 
 
   const {data:food=[],isPending:loading,refetch} = useQuery({
-    queryKey:['food'],
+    queryKey:['food',asc,search],
     queryFn:async()=>{
-        const res = await axiosPublic.get('/foods');
+        const res = await axiosPublic.get(`/foods?sort=${asc ? 'asc' : 'desc'}&search=${search}`);
         return res.data;
     }
 })
