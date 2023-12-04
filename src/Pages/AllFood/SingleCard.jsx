@@ -9,7 +9,7 @@ const SingleCard = ({ foods }) => {
 
   //   useEffect(() => {
 
-  //   fetch(`http://localhost:5000/foods?sort=${asc?'asc' : 'des'}&search=${search}`)
+  //   fetch(`https://resturant-managment-server.vercel.app/foods?sort=${asc?'asc' : 'des'}&search=${search}`)
 
   // }, []);
 

@@ -22,7 +22,7 @@ const useFoods = (asc,search,currentPage,itemsPerPage) => {
 
     // const [allFoods, setAllFoods] = useState([]);
     // useEffect(() => {
-    //     // fetch("http://localhost:5000/services")
+    //     // fetch("https://resturant-managment-server.vercel.app/services")
     //     //   .then((res) => res.json())
     //     //   .then((data) => setServices(data));
 

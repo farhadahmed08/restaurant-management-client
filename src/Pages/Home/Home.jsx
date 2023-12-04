@@ -4,11 +4,16 @@ import TopFood from "../../Components/TopFood";
 import SectionTitle from "../../Components/SectionTitle";
 import About from "../../Components/About";
 import AboutRestaurant from "../../Components/AboutRestaurant";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const topFoods = useLoaderData();
 
   return (
+<>
+    <Helmet>
+    <title>Bistro Boss | Home</title>
+  </Helmet>
     <div>
       <Banner />
 
@@ -39,6 +44,7 @@ const Home = () => {
       ></SectionTitle>
       <AboutRestaurant/>
     </div>
+    </>
   );
 };
 

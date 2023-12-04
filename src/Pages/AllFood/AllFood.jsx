@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import SingleCard from "./SingleCard";
 import useFoods from "../../hooks/useFoods";
-import Banner from "../../Components/Banner";
+
 import AllFoodBanner from "../../Components/AllFoodBanner";
 import './AllFood.css';
 import { useLoaderData } from "react-router-dom";
-// import { useLoaderData } from "react-router-dom";
+
 
 const AllFood = () => {
   const [asc, setAsc] = useState(true);
@@ -32,11 +32,11 @@ const AllFood = () => {
 
   // useEffect(()=>{
 
-  // fetch(`http://localhost:5000/services?sort=${asc?'asc' : 'des'}&search=${search}`)
+  // fetch(`https://resturant-managment-server.vercel.app/services?sort=${asc?'asc' : 'des'}&search=${search}`)
   // .then((res) => res.json())
   //   .then((data) => setSearch(data));
 
-  //         fetch("http://localhost:5000/foods")
+  //         fetch("https://resturant-managment-server.vercel.app/foods")
   //   .then((res) => res.json())
   //   .then((data) => setAllFoods(data));
 

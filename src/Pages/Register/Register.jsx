@@ -21,8 +21,9 @@ const Register = () => {
         const form = e.target;
         const name = form.name.value;
         const email = form.email.value;
+        const image = form.image.value;
         const password = form.password.value;
-        console.log(name,email,password)
+        console.log(name,email,password,image)
         e.target.reset()
 
         if (password.length <6) {
@@ -44,7 +45,7 @@ const Register = () => {
             //new user has been created;
         const createdAt = result.user?.metadata?.creationTime;
         const user = {email,createAt:createdAt};
-        fetch('http://localhost:5000/users',{
+        fetch('https://resturant-managment-server.vercel.app/users',{
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -108,6 +109,18 @@ const Register = () => {
                 type="password"
                 name="password"
                 placeholder="password"
+                className="input input-bordered"
+                required
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Image</span>
+              </label>
+              <input
+                type="text"
+                name="image"
+                placeholder="Image Url"
                 className="input input-bordered"
                 required
               />

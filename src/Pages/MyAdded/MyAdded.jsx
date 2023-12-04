@@ -11,7 +11,7 @@ const MyAdded = () => {
 
 
     return (
-        <div>
+       <div>
              <SectionTitle>
             subHeading={"From 11.00am to 10.00pm"}
         heading={"My Orders"}
