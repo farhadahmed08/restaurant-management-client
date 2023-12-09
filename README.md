@@ -1,12 +1,7 @@
 # 🌟 About the Project
 
-📷 Screenshots
+#user can search their food item and sort by price
+#user can add food itemss and update added items
+#user can add to card their food and delete it
 
-
-👾 Tech Stack
-<details open>
-<summary>Client</summary>
-- **React.js**
-- **TailwindCSS**
-</details>
 
