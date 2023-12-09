@@ -1,2 +1,4 @@
-# restaurant-management
+# 🌟 About the Project
+
+📷 Screenshots
 
