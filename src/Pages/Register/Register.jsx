@@ -45,7 +45,7 @@ const Register = () => {
             //new user has been created;
         const createdAt = result.user?.metadata?.creationTime;
         const user = {email,createAt:createdAt};
-        fetch('https://resturant-managment-server.vercel.app/users',{
+        fetch('http://localhost:5000/users',{
           method: "POST",
           headers: {
             "content-type": "application/json",

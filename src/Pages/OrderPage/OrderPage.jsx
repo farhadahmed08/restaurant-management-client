@@ -3,6 +3,8 @@ import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import UseOrder from "../../hooks/UseOrder";
+import { useEffect, useState } from "react";
+
 
 
 const OrderPage = () => {
@@ -16,9 +18,26 @@ const OrderPage = () => {
      const location = useLocation();
     //  const from = location.state?.from?.pathname || "/";
      const [,refetch] = UseOrder();
+     const [quantity, setQuantity] = useState(1);
+     const [error, setError] = useState(null);
+    //  const [totalPrice, setTotalPrice] = useState(price);
+
+    //  useEffect(() => {
+    //   const newTotalPrice = price * quantity;
+    //   setTotalPrice(newTotalPrice);
+    // }, [quantity, price]);
+
+    const totalPrice = price * quantity;
+
+   
 
 
      const handleAddToCart =()=>{
+      // Check if quantity is provided and is a valid number
+  if (!quantity || isNaN(quantity) || quantity <= 0) {
+    setError("Please enter a valid quantity.");
+    return;
+  }
         // console.log(food,user.email);
         if (user && user.email) {
           //  send cart item to the database 
@@ -29,13 +48,14 @@ const OrderPage = () => {
             name:foodName,
             image:foodImage,
             category:foodCategory,
-            quantity:'quantity',
-            price
+            quantity:(quantity*1),
+            totalPrice
           }
           axiosSecure.post('/orderItems',orderItem)
           .then(res=>{
             console.log(res.data)
             if (res.data.insertedId) {
+              setError(null);
               Swal.fire({
                 position: "top-end",
                 icon: "success",
@@ -45,6 +65,18 @@ const OrderPage = () => {
               });
               //refetch cart to update the cart items count
               refetch();
+               // Clear the input field after adding to the cart
+                setQuantity("");
+            }
+          })
+          .catch((error) => {
+            // Handle error
+            if (error.response.status === 400) {
+              // Set the error state to display the error message
+              setError(error.response.data.error);
+              console.log(error.response.data.error)
+            } else {
+              console.error('Error adding to cart:', error.message);
             }
           });
 
@@ -80,11 +112,17 @@ const OrderPage = () => {
       <p className="border border-black">Price: <span className="font-bold text-blue-700">{user?.displayName}</span> $</p>
       <p className="border border-black">Price: <span className="font-bold text-blue-700">{price}</span> $</p>
 
-      <input type="text" name="quantity" placeholder="Enter Order Quantity"  className="input input-bordered w-full"  />
-  
+      <input type="text" name="quantity" placeholder="Enter Order Quantity" value={quantity}
+  onChange={(e) => setQuantity(e.target.value)} className="input input-bordered w-full"  />
+   <p>Total Price: <span className="font-bold text-green-700">${totalPrice}</span></p>
      <div className="card-actions mt-10">
         <button onClick={handleAddToCart} className="btn btn-primary">Order Now</button>
       </div>
+      {error && (
+            <div className="text-red-600 mt-2">
+              <p>{error}</p>
+            </div>
+          )} 
     </div>
   </div>
       </div>

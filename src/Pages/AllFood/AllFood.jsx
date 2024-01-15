@@ -32,11 +32,11 @@ const AllFood = () => {
 
   // useEffect(()=>{
 
-  // fetch(`https://resturant-managment-server.vercel.app/services?sort=${asc?'asc' : 'des'}&search=${search}`)
+  // fetch(`http://localhost:5000/services?sort=${asc?'asc' : 'des'}&search=${search}`)
   // .then((res) => res.json())
   //   .then((data) => setSearch(data));
 
-  //         fetch("https://resturant-managment-server.vercel.app/foods")
+  //         fetch("http://localhost:5000/foods")
   //   .then((res) => res.json())
   //   .then((data) => setAllFoods(data));
 
